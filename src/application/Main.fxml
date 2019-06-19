@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <SplitPane dividerPositions="0.32706766917293234" layoutX="138.0" layoutY="64.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="249.0" styleClass="button-blue" stylesheets="@Viper.css">
+               <children>
+                  <TreeView fx:id="treeView" layoutX="93.0" layoutY="38.0" prefHeight="460.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0" />
+                  <MenuBar prefHeight="17.0" prefWidth="256.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Statistics">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#SeriesBuilder" text="Overall Scores" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleHeatMap" text="Heat Map" />
+                          <MenuItem mnemonicParsing="false" onAction="#handleshowStatistics" text="Categories Correlation" />
+                              <MenuItem mnemonicParsing="false" onAction="#PhoneChart" text="Cell phone" />
+                              <MenuItem mnemonicParsing="false" onAction="#CpChart" text="Computer" />
+                              <MenuItem mnemonicParsing="false" onAction="#EpChart" text="Ear phone" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Update">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#handleUpdate" text="Update Data" />
+                           </items></Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="button-blue" stylesheets="@Viper.css">
+               <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" prefHeight="58.0" prefWidth="129.0" text="筛选评论" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="104.0" layoutY="58.0" text="时间" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="104.0" layoutY="102.0" text="评论长度" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="225.0" />
+                        <Label layoutX="104.0" layoutY="152.0" text="有图/视频" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="300.0" />
+                        <ChoiceBox fx:id="timeChoice" layoutX="215.0" layoutY="53.0" prefWidth="150.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0" />
+                        <ChoiceBox fx:id="starsChoice" layoutX="215.0" layoutY="107.0" prefWidth="150.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="225.0" />
+                        <ChoiceBox fx:id="numbersChoice" layoutX="215.0" layoutY="157.0" prefWidth="150.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="300.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="confirmbutton" layoutX="411.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleConfirm" prefHeight="45.0" prefWidth="80.0" text="确定" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

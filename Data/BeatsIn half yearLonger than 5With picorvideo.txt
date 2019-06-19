@@ -1,0 +1,4 @@
+好看 舒服 精致 便宜 漂亮
+4 4 5 3 4
+positive positive positive positive positive
+4.4
